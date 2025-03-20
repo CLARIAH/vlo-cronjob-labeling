@@ -1,0 +1,15 @@
+[project]
+name = "ineo-labeling"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "charset-normalizer>=3.4.1",
+    "idna>=3.10",
+    "pyfat",
+    "requests>=2.32.3",
+]
+
+[tool.uv.sources]
+pyfat = { git = "https://github.com/CLARIAH/pyFAT.git", rev = "develop" }
