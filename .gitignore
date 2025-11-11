@@ -1,5 +1,7 @@
 .idea
 .venv
-.logs/*
+.logs
 ttl
 **/__pycache__
+*.log
+

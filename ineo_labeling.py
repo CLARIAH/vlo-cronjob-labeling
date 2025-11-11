@@ -277,6 +277,7 @@ def _label_ineo_records(docs: List[Dict], mapping: Providers) -> List[Dict]:
     """
     Label the Solr records with the ineo_record field.
     """
+    # TODO: move ttl_path to environment variable, make sure ttl folder exists
     ttl_path: str = "/srv/vlo-data/ttl"
     good = 0
     bad = 0
@@ -366,6 +367,7 @@ def main() -> None:
     """
     Parse the mapping file and create a providers object.
     """
+    logger.info(f"Loading mapping file from {INEO_MAPPING} ...")
     mapping_tree = fetch_mapping_file(INEO_MAPPING)
     providers: Providers = parse_mapping_file(mapping_tree)
     logger.info(f"providers: {providers}")
